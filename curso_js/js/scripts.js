@@ -880,19 +880,215 @@ console.log(valor_pedagio(categoria_veiculo));
 // };
 
 
-var check = document.getElementsByName("lanche");
+// var check = document.getElementsByName("lanche");
 
-for (var a = 0;  a < check.length; a++) {
+// for (var a = 0;  a < check.length; a++) {
 
-    check[a].onchange = function () {
+//     check[a].onchange = function () {
 
-        document.getElementById("check_selecionado").innerHTML = "";
+//         document.getElementById("check_selecionado").innerHTML = "";
         
-        for (var b = 0;  b < check.length; b++) {
+//         for (var b = 0;  b < check.length; b++) {
             
-            if (check[b].checked) {
-                document.getElementById("check_selecionado").innerHTML += '<li>' + check[b].value + '</li>';
-            }
-        }
-    }  
-}
+//             if (check[b].checked) {
+//                 document.getElementById("check_selecionado").innerHTML += '<li>' + check[b].value + '</li>';
+//             }
+//         }
+//     }  
+// }
+
+// Aula 36 - Jquery - Loop Each
+
+/*var lista = ["HTML","CSS","Javascript", "jQuery", "PHP"];
+
+    $.each(lista, function( indice, valor ) {
+        console.log('O elemento de índice [' + indice + '] tem o valor de ' + valor);
+    });
+
+     var pessoa = {
+        'nome': 'João Pedro',
+        'DN': '20/01/1990',
+        'CPF': '111.111.111-11'
+    };
+
+    $.each(pessoa, function( chave, valor ) {
+        console.log('O elemento de chave [' + chave + '] tem o valor de ' + valor);
+    });*/
+
+
+    // var intersses =  $("#interesses li");
+    
+    // console.log(intersses);
+
+    // $.each(intersses, function(chave, valor){
+    //     console.log($(valor).text());
+    // });
+
+    // Aula 43 - funcoes callback
+
+    // function pegar_usuario(callback){
+    //     window.setTimeout(function(){
+
+    //         var u = {
+    //             'nome': 'João'
+    //         };
+            
+    //         callback(u);
+
+    //     }, 2000)
+       
+    // }
+            
+    // pegar_usuario(function(user){
+    //     console.log('Olá ' + user.nome + ', como vai?');
+    // });
+
+    // Aula 44 - Lidando com erros(Erros handing)
+    
+    // function pegar_usuario(){
+
+    //     window.setTimeout(function(){
+    //         var u = {
+    //             'nome': 'João'
+    //         };
+    //         return u;
+    //     }, 1000);
+        
+    // }
+            
+    // function saudar_usuario(user) {
+    //     console.log('Olá ' + user.nome + ', como vai?');
+    // }
+    
+    // var user = {'nome': ''};
+
+    // try {
+    //     if(user.nome == ''){
+    //         throw 'Nome em branco'
+    //     }
+
+    //     saudar_usuario(user);
+
+    // } catch(err) {
+    //     console.log(err);
+    // }
+  
+    
+    // console.log('Novo comando para executar ao final');
+
+    // Aula 45 - Operador If Ternário
+
+    // condição ? "valor se for verdadeiro" : "valor se for falso";
+
+    // Exemplo com if normal:
+    // var nome = "carlos";
+    // if (nome) {
+    //     var mensagem = "Olá " + nome;
+    // } else {
+    //     var mensagem = "Nome não informado";
+    // }
+
+    // var mensagem;
+
+    // nome ? mensagem = "Olá " + nome : mensagem = "Nome não informado";
+
+    // mensagem = nome ? "Olá " + nome : "Nome não informado";
+
+    // console.log(mensagem);
+    // console.log(mensagem);
+
+    // nome = "";
+    // idade = 30;
+
+    // mensagem = (nome && idade) ? "Olá " + nome + ", voçe tem " + idade + "anos." 
+    // : (!nome && !idade) ? "Nome e idade nao informados"
+    // : (!idade) ? "idade nao informada"
+    // : "Nome nao informado";
+
+    // console.log(mensagem);
+
+    // Aula 46 - Escopo
+
+    
+
+    // // function criar_nome() {
+    //     var nome = 'Maria';
+    //     console.log(nome); // O console mostrará 'Maria'
+    // }
+
+    // criar_nome();
+
+    // console.log(window.nome);
+
+    //  var x = 0;
+    // // if(x == 0){
+    // //     let nome = "mariana";
+    // // }
+    // // console.log(nome);
+
+    // let variaveis usadas local
+    // var variaveis globais
+    // const constantes, variaveis que nao podem ser alterado no longo do codigo
+
+    // x ? "Olá esse é meu if ternario" : "Deu ruimm";
+
+    // for(let a = 0; a < 5; a++){
+    //     console.log(a);
+    // }
+
+    // const  PI = "3.14159";
+    
+    // Aula 47 = namespaces
+
+    // var meuWebApp = {
+
+    //     'nome': "Felipe",
+    //     'ver_nome': function (){
+    //         console.log(meuWebApp.nome);
+    //     }
+    // };
+    
+    // console(meuWebApp.nome);
+
+    // var meuWebApp = (function(){
+        
+    //     var nome = "Samuel";
+
+    //     return {
+    //         'ver_nome': function(){
+    //             return nome;
+    //         },
+    //         'mudar_nome': function(novo_nome){
+    //             nome = novo_nome;
+    //         },
+    //         'apagar_nome': function(){
+    //             nome = null;
+    //         }
+    //     }
+    // })();
+
+    // meuWebApp.mudar_nome("Joao")
+    // console.log(meuWebApp.ver_nome());
+
+    // meuWebApp.apagar_nome()
+    // console.log(meuWebApp.ver_nome());
+
+    // Aula 48 - Json
+
+    // var funcionario = {
+    //     'nome': "Fernanda Costa",
+    //     'd_nascimento': '1988-10-01',
+    //     'CPF': '111.111.111-11'
+    // };
+
+    // var funcionario_json = JSON.stringify(funcionario);
+
+    // var funcionario_obj = JSON.parse(funcionario_json);
+
+    // console.log(funcionario_obj.nome);
+
+    var info_temp = '{"coord":{"lon":-0.13,"lat":51.51},"weather":[{"id":300,"main":"Drizzle","description":"light intensity drizzle","icon":"09d"}],"base":"stations","main":{"temp":280.32,"pressure":1012,"humidity":81,"temp_min":279.15,"temp_max":281.15},"visibility":10000,"wind":{"speed":4.1,"deg":80},"clouds":{"all":90},"dt":1485789600,"sys":{"type":1,"id":5091,"message":0.0103,"country":"GB","sunrise":1485762037,"sunset":1485794875},"id":2643743,"name":"London","cod":200}'
+    
+    var info = JSON.parse(info_temp);
+
+    // console.log("A umidade e de " + info.main.humidity + "%");
