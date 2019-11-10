@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <link rel="stylesheet" href="css/default.css">
+        <script src="tools/indice.js"></script>
+        <script>var current_class="gameQuestion";</script>
+        <script src="highlight/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Game Question</title>
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+    
+    </head>
+
+    <body>
+
+        <div class="page-container">
+            <header>
+                <div class="logo-area">
+                    <img src="img/jogo.png" alt="logo javascript">
+                </div>
+                <div class="course-title">
+                    <h1>Acerte se puder!!</h1>
+                </div>
+            </header>
+
+            <main>
+
+                
+                <!--<b>Desafio final:</b> Trabalhe com o API Open Trivia para gerar uma pergunta sobre filmes.
+                Endereço do API: <a href="https://opentdb.com/api_config.php">https://opentdb.com/api_config.php</a> <br><br>
+
+                Esta pergunta deve ser colocada abaixo, com as opções de resposta em radio buttons. Deve haver também um 
+                botão "Enviar Reposta", que informará ao usuário se a resposta está certa ou errada. O botão só deve aparecer se 
+                alguma resposta estiver marcada.-->
+                <b>Pergunta:</b>
+
+
+                <br><br>
+                <h3 id="pergunta">Espaço para a pergunta</h3>
+
+                <form id="opcoes">
+                    
+                </form>
+
+                <p id="erro_acerto"></p>
+
+                <button style="display: none" id="submeter">Enviar respostas</button>
+                <button style="display: none" id="nova_pergunta">Gerar Pergunta</button>
+
+                <p id="placar"></p>
+            
+
+            </main>
+
+        </div>
+
+        <script src="js/ex5.js"></script>
+
+    </body>
+
+</html>
+

@@ -15,7 +15,7 @@ body a {
     width: 100%;
     min-width: 300px;
     height: 100vh;
-    background: url('../img/bg.png') no-repeat center center fixed;
+    background: url('../img/background.jpeg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -107,6 +107,7 @@ main button {
     font-size: 14px;
     min-width: 189px;
 }
+
 
 main button:hover {
     background-color: #034732;
@@ -311,6 +312,8 @@ main .dark_box .dark_box_content {
     padding: 14px;
     display: block;
 }
+
+
 
 
 

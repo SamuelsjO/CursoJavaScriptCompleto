@@ -1092,3 +1092,72 @@ console.log(valor_pedagio(categoria_veiculo));
     var info = JSON.parse(info_temp);
 
     // console.log("A umidade e de " + info.main.humidity + "%");
+
+    // // Aula  50 - AJAX - Request
+
+    // // var xhttp = new XMLHttpRequest();
+
+    // var xhttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
+
+    // xhttp.onreadystatechange = function() {
+    //     if (this.readyState == 4 && this.status == 200) {
+    //         console.log(this.responseText);
+    //     }
+    // };
+
+
+    // xhttp.open("GET", "https://openweathermap.org/data/2.5/weather?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22");
+    // xhttp.send();
+
+
+// // aula 52 - response
+// function mostrar_temp(dados){
+//     var dados_obj = JSON.parse(dados);
+//     console.log('A temperatura em londres é de: ' + dados_obj.main.temp + ' graus celsius');
+// }
+
+// function mostrar_dados(dados){
+//     var dados_obj = JSON.parse(dados);
+//     console.log(dados_obj);
+
+// }
+// function tempo_londres(callback) {
+//     var xhttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
+                    
+//     xhttp.onreadystatechange = function() {
+//         if (this.readyState == 4 && this.status == 200) {
+//             callback(this.responseText);
+            
+//         } 
+//     };
+//     xhttp.open("GET", "https://openweathermap.org/data/2.5/weather?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22");
+//     xhttp.send();
+// }
+
+// tempo_londres(mostrar_dados);
+
+// Aula 53 - Ajax-jequery
+function show_data(data){
+    
+    $("#temp_atual").html(data.main.temp);
+    $("#temp_max").html(data.main.temp_max);
+    $("#temp_min").html(data.main.temp_min);
+}
+
+function take_data(callback){
+    $.ajax({
+        url: "https://openweathermap.org/data/2.5/weather?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22",
+        type: "GET",
+        dataType: "json",
+       
+    }).done(function(data){
+
+        callback(data);
+
+    }).fail(function(){
+        console.log('Erro na requisiçao');
+    });
+}
+
+take_data(show_data);
+
